@@ -23,24 +23,19 @@ int main(void) {
 
 	while (1) {
 
+		int i;
+		int size = strlen(c);
 
+		for (i = 0; i < size; i++) {
+			message[i] = c[i];
+		}
 
-			int i;
-					int size = strlen(c);
+		while (tx_done == 0) {
+			//
+		}
+		tx_done = 0;
 
-					for (i = 0; i < size; i++) {
-						message[i] = c[i];
-					}
-
-					while (tx_done == 0) {
-						//
-					}
-					tx_done = 0;
-
-					dma2_stream7_setup((uint32_t) message, size);
-
-
-
+		dma2_stream7_setup((uint32_t) message, size);
 
 	}
 
